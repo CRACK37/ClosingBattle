@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Nullable>enable</Nullable>
+        
+        <RestoreAdditionalProjectSources>
+            https://api.nuget.org/v3/index.json;
+            https://nuget.bepinex.dev/v3/index.json;
+            https://nuget.samboy.dev/v3/index.json
+        </RestoreAdditionalProjectSources>
+        
+        <LangVersion>default</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+        <PackageReference Include="BepInEx.Core" Version="5.*" />
+        <PackageReference Include="UnityEngine.Modules" Version="2022.3.28" IncludeAssets="compile" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Ultrakill.GameLibs-Stripped" Version="0.0.16-d" ExcludeAssets="runtime" />
+    </ItemGroup>
+    
+</Project>
