@@ -1,1 +1,74 @@
-{"m_LocatorId":"AddressablesMainContentCatalog","m_BuildResultHash":"198f45d4353f77bf8c51ff609f1650ad","m_InstanceProviderData":{"m_Id":"UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider","m_ObjectType":{"m_AssemblyName":"Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","m_ClassName":"UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider"},"m_Data":""},"m_SceneProviderData":{"m_Id":"UnityEngine.ResourceManagement.ResourceProviders.SceneProvider","m_ObjectType":{"m_AssemblyName":"Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","m_ClassName":"UnityEngine.ResourceManagement.ResourceProviders.SceneProvider"},"m_Data":""},"m_ResourceProviderData":[{"m_Id":"UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider","m_ObjectType":{"m_AssemblyName":"Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","m_ClassName":"UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider"},"m_Data":""},{"m_Id":"UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider","m_ObjectType":{"m_AssemblyName":"Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","m_ClassName":"UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider"},"m_Data":""},{"m_Id":"UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider","m_ObjectType":{"m_AssemblyName":"Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","m_ClassName":"UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider"},"m_Data":""}],"m_ProviderIds":["UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider","UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider"],"m_InternalIds":["{UnityEngine.AddressableAssets.Addressables.RuntimePath}\\StandaloneWindows64\\closingbattle_assets_all.bundle","2eccacce5ad8cb948b22e1bda8000969","abb4f854403ea154ba4958ad9a110869"],"m_KeyDataString":"BQAAAABAAAAAY2xvc2luZ2JhdHRsZV9hc3NldHNfYWxsX2RmMTEwNzAwMTZkNWFjMzljNzBkMTU4ODIwOWQzY2IwLmJ1bmRsZQANAAAAU2xhc2hNYXRlcmlhbAAgAAAAMmVjY2FjY2U1YWQ4Y2I5NDhiMjJlMWJkYTgwMDA5NjkACwAAAFNsYXNoU2hhZGVyACAAAABhYmI0Zjg1NDQwM2VhMTU0YmE0OTU4YWQ5YTExMDg2OQ==","m_BucketDataString":"BQAAAAQAAAABAAAAAAAAAEkAAAABAAAAAQAAAFsAAAABAAAAAQAAAIAAAAABAAAAAgAAAJAAAAABAAAAAgAAAA==","m_EntryDataString":"AwAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAADi2T3B/////wEAAAABAAAAAgAAAAEAAAAAAAAA4tk9wf////8DAAAAAgAAAA==","m_ExtraDataString":"B0xVbml0eS5SZXNvdXJjZU1hbmFnZXIsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsSlVuaXR5RW5naW5lLlJlc291cmNlTWFuYWdlbWVudC5SZXNvdXJjZVByb3ZpZGVycy5Bc3NldEJ1bmRsZVJlcXVlc3RPcHRpb25zngIAAHsAIgBtAF8ASABhAHMAaAAiADoAIgBkAGYAMQAxADAANwAwADAAMQA2AGQANQBhAGMAMwA5AGMANwAwAGQAMQA1ADgAOAAyADAAOQBkADMAYwBiADAAIgAsACIAbQBfAEMAcgBjACIAOgAwACwAIgBtAF8AVABpAG0AZQBvAHUAdAAiADoAMAAsACIAbQBfAEMAaAB1AG4AawBlAGQAVAByAGEAbgBzAGYAZQByACIAOgBmAGEAbABzAGUALAAiAG0AXwBSAGUAZABpAHIAZQBjAHQATABpAG0AaQB0ACIAOgAtADEALAAiAG0AXwBSAGUAdAByAHkAQwBvAHUAbgB0ACIAOgAwACwAIgBtAF8AQgB1AG4AZABsAGUATgBhAG0AZQAiADoAIgA2ADAAYgA0AGYAZAAzADQAZQA2AGIAMABiADYAZQAxADgAOABjADIANQA4ADAAZQAwAGMANABhADQANwAzADgAIgAsACIAbQBfAEEAcwBzAGUAdABMAG8AYQBkAE0AbwBkAGUAIgA6ADAALAAiAG0AXwBCAHUAbgBkAGwAZQBTAGkAegBlACIAOgAxADIANQA3ADMANwAsACIAbQBfAFUAcwBlAEMAcgBjAEYAbwByAEMAYQBjAGgAZQBkAEIAdQBuAGQAbABlAHMAIgA6AGYAYQBsAHMAZQAsACIAbQBfAFUAcwBlAFUAVwBSAEYAbwByAEwAbwBjAGEAbABCAHUAbgBkAGwAZQBzACIAOgBmAGEAbABzAGUALAAiAG0AXwBDAGwAZQBhAHIATwB0AGgAZQByAEMAYQBjAGgAZQBkAFYAZQByAHMAaQBvAG4AcwBXAGgAZQBuAEwAbwBhAGQAZQBkACIAOgBmAGEAbABzAGUAfQA=","m_resourceTypes":[{"m_AssemblyName":"Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","m_ClassName":"UnityEngine.ResourceManagement.ResourceProviders.IAssetBundleResource"},{"m_AssemblyName":"UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","m_ClassName":"UnityEngine.Material"},{"m_AssemblyName":"UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","m_ClassName":"UnityEngine.Shader"}],"m_InternalIdPrefixes":[]}
+{
+  "m_LocatorId": "AddressablesMainContentCatalog",
+  "m_BuildResultHash": "198f45d4353f77bf8c51ff609f1650ad",
+  "m_InstanceProviderData": {
+    "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider",
+    "m_ObjectType": {
+      "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider"
+    },
+    "m_Data": ""
+  },
+  "m_SceneProviderData": {
+    "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.SceneProvider",
+    "m_ObjectType": {
+      "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.SceneProvider"
+    },
+    "m_Data": ""
+  },
+  "m_ResourceProviderData": [
+    {
+      "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider",
+      "m_ObjectType": {
+        "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider"
+      },
+      "m_Data": ""
+    },
+    {
+      "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider",
+      "m_ObjectType": {
+        "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider"
+      },
+      "m_Data": ""
+    },
+    {
+      "m_Id": "UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider",
+      "m_ObjectType": {
+        "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider"
+      },
+      "m_Data": ""
+    }
+  ],
+  "m_ProviderIds": [
+    "UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider",
+    "UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider"
+  ],
+  "m_InternalIds": [
+    "{ClosingBattle.Plugin.AddressableAssetPath}\\StandaloneWindows64\\closingbattle_assets_all.bundle",
+    "2eccacce5ad8cb948b22e1bda8000969",
+    "abb4f854403ea154ba4958ad9a110869"
+  ],
+  "m_KeyDataString": "BQAAAABAAAAAY2xvc2luZ2JhdHRsZV9hc3NldHNfYWxsX2RmMTEwNzAwMTZkNWFjMzljNzBkMTU4ODIwOWQzY2IwLmJ1bmRsZQANAAAAU2xhc2hNYXRlcmlhbAAgAAAAMmVjY2FjY2U1YWQ4Y2I5NDhiMjJlMWJkYTgwMDA5NjkACwAAAFNsYXNoU2hhZGVyACAAAABhYmI0Zjg1NDQwM2VhMTU0YmE0OTU4YWQ5YTExMDg2OQ==",
+  "m_BucketDataString": "BQAAAAQAAAABAAAAAAAAAEkAAAABAAAAAQAAAFsAAAABAAAAAQAAAIAAAAABAAAAAgAAAJAAAAABAAAAAgAAAA==",
+  "m_EntryDataString": "AwAAAAAAAAAAAAAA/////wAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAADi2T3B/////wEAAAABAAAAAgAAAAEAAAAAAAAA4tk9wf////8DAAAAAgAAAA==",
+  "m_ExtraDataString": "B0xVbml0eS5SZXNvdXJjZU1hbmFnZXIsIFZlcnNpb249MC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsSlVuaXR5RW5naW5lLlJlc291cmNlTWFuYWdlbWVudC5SZXNvdXJjZVByb3ZpZGVycy5Bc3NldEJ1bmRsZVJlcXVlc3RPcHRpb25zngIAAHsAIgBtAF8ASABhAHMAaAAiADoAIgBkAGYAMQAxADAANwAwADAAMQA2AGQANQBhAGMAMwA5AGMANwAwAGQAMQA1ADgAOAAyADAAOQBkADMAYwBiADAAIgAsACIAbQBfAEMAcgBjACIAOgAwACwAIgBtAF8AVABpAG0AZQBvAHUAdAAiADoAMAAsACIAbQBfAEMAaAB1AG4AawBlAGQAVAByAGEAbgBzAGYAZQByACIAOgBmAGEAbABzAGUALAAiAG0AXwBSAGUAZABpAHIAZQBjAHQATABpAG0AaQB0ACIAOgAtADEALAAiAG0AXwBSAGUAdAByAHkAQwBvAHUAbgB0ACIAOgAwACwAIgBtAF8AQgB1AG4AZABsAGUATgBhAG0AZQAiADoAIgA2ADAAYgA0AGYAZAAzADQAZQA2AGIAMABiADYAZQAxADgAOABjADIANQA4ADAAZQAwAGMANABhADQANwAzADgAIgAsACIAbQBfAEEAcwBzAGUAdABMAG8AYQBkAE0AbwBkAGUAIgA6ADAALAAiAG0AXwBCAHUAbgBkAGwAZQBTAGkAegBlACIAOgAxADIANQA3ADMANwAsACIAbQBfAFUAcwBlAEMAcgBjAEYAbwByAEMAYQBjAGgAZQBkAEIAdQBuAGQAbABlAHMAIgA6AGYAYQBsAHMAZQAsACIAbQBfAFUAcwBlAFUAVwBSAEYAbwByAEwAbwBjAGEAbABCAHUAbgBkAGwAZQBzACIAOgBmAGEAbABzAGUALAAiAG0AXwBDAGwAZQBhAHIATwB0AGgAZQByAEMAYQBjAGgAZQBkAFYAZQByAHMAaQBvAG4AcwBXAGgAZQBuAEwAbwBhAGQAZQBkACIAOgBmAGEAbABzAGUAfQA=",
+  "m_resourceTypes": [
+    {
+      "m_AssemblyName": "Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.ResourceManagement.ResourceProviders.IAssetBundleResource"
+    },
+    {
+      "m_AssemblyName": "UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.Material"
+    },
+    {
+      "m_AssemblyName": "UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "m_ClassName": "UnityEngine.Shader"
+    }
+  ],
+  "m_InternalIdPrefixes": []
+}
