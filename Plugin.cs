@@ -1,15 +1,12 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
+using ClosingBattle.Classes;
 using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using ClosingBattle.Classes;
 using UnityEngine;
-
-using ClosingBattle.Patches;
-using GameConsole.pcon;
 using UnityEngine.AddressableAssets;
 using UnityEngine.AddressableAssets.ResourceLocators;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -18,11 +15,12 @@ using UnityEngine.SceneManagement;
 namespace ClosingBattle;
 
 [BepInPlugin(GUID, NAME, VERS)]
+[BepInDependency("com.eternalUnion.pluginConfigurator")]
 public class Plugin : BaseUnityPlugin
 {
     public const string GUID = "Q2xvc2luZ0JhdHRsZV9f";
     public const string NAME = "ClosingBattle";
-    public const string VERS = "1.0.1";
+    public const string VERS = "1.0.2";
     
     private static List<Action> _assetBinds = new List<Action>();
     
@@ -42,6 +40,8 @@ public class Plugin : BaseUnityPlugin
         Logger = base.Logger;
         Logger.LogInfo($"Plugin {GUID} is loaded!");
         gameObject.hideFlags = HideFlags.DontSaveInEditor;
+
+        ConfigManager.Initialize();
 
         SceneManager.sceneLoaded += (s, m) =>
         {

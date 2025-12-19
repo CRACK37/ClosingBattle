@@ -56,6 +56,12 @@
     </ItemGroup>
     
     <ItemGroup>
+      <Reference Include="PluginConfigurator">
+        <HintPath>Libs\PluginConfigurator.dll</HintPath>
+      </Reference>
+      <Reference Include="PluginConfiguratorComponents">
+        <HintPath>Libs\PluginConfiguratorComponents.dll</HintPath>
+      </Reference>
       <Reference Include="Unity.Addressables">
         <HintPath>Libs\Unity.Addressables.dll</HintPath>
       </Reference>
