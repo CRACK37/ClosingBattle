@@ -11,7 +11,7 @@ public static class ConfigManager
 {
     public static PluginConfigurator config = null;
 
-    public static BoolField disableMainWeapons;
+    public static BoolField useModWeapons;
 
     public static void Initialize()
     {
@@ -20,6 +20,6 @@ public static class ConfigManager
 
         config = PluginConfigurator.Create(Plugin.NAME, Plugin.GUID);
 
-        disableMainWeapons = new BoolField(config.rootPanel, "Disable base game weapons", "disableBaseGameWeapons", true);
+        useModWeapons = new BoolField(config.rootPanel, "Use the mod weapons", "useModWeapons", true);
     }
 }

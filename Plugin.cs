@@ -20,7 +20,7 @@ public class Plugin : BaseUnityPlugin
 {
     public const string GUID = "Q2xvc2luZ0JhdHRsZV9f";
     public const string NAME = "ClosingBattle";
-    public const string VERS = "1.0.2";
+    public const string VERS = "1.0.3";
     
     private static List<Action> _assetBinds = new List<Action>();
     
