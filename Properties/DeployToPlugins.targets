@@ -18,15 +18,24 @@
     
     <MakeDir Condition="!Exists('$(DestinationDir)')"
       Directories="$(DestinationDir)"/>
-    
-    <ItemGroup>
-      <FilesToCopy Include="$(SourceDir)\**\*" />
-    </ItemGroup>
+
     <Copy
-        SourceFiles="@(FilesToCopy)"
-        DestinationFolder="$(DestinationDir)\%(RecursiveDir)"
-        SkipUnchangedFiles="true"
+      SourceFiles="$(SourceDir)\$(AssemblyName).dll"
+      DestinationFiles="$(DestinationDir)\$(AssemblyName).dll"
+      SkipUnchangedFiles="true" 
     />
+
+    <!-- Recursively copy the Assets folder and its contents only -->
+    <ItemGroup>
+      <AssetFiles Include="$(SourceDir)Assets\**\*" />
+    </ItemGroup>
+
+    <Copy
+        SourceFiles="@(AssetFiles)"
+        DestinationFolder="$(DestinationDir)\Assets\%(RecursiveDir)"
+        SkipUnchangedFiles="true" 
+    />
+    
     <Message Importance="high" Text="Files copied to $(DestinationDir)" />
   </Target>
   
