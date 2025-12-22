@@ -45,6 +45,14 @@
       </None>
     </ItemGroup>
 
+  <PropertyGroup>
+    <!-- Ensure that this has BepInEx installed -->
+    <UltrakillDir>C:/Program Files (x86)/Steam/steamapps/common/ULTRAKILL/</UltrakillDir>
+    <CopyToBepInExPluginsDir>true</CopyToBepInExPluginsDir>
+  </PropertyGroup>
+  
+  <Import Project="Properties/DeployToPlugins.targets" Condition="Exists('Properties/DeployToPlugins.targets')" />
+
     <ItemGroup>
         <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
         <PackageReference Include="BepInEx.Core" Version="5.4.21" />
