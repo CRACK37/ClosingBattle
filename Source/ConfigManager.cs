@@ -12,6 +12,7 @@ public static class ConfigManager
     public static PluginConfigurator config = null;
 
     public static BoolField useModWeapons;
+    public static BoolField debugSlash;
 
     public static void Initialize()
     {
@@ -21,5 +22,6 @@ public static class ConfigManager
         config = PluginConfigurator.Create(Plugin.NAME, Plugin.GUID);
 
         useModWeapons = new BoolField(config.rootPanel, "Use the mod weapons", "useModWeapons", true);
+        debugSlash = new BoolField(config.rootPanel, "Debug slash", "debugSlash", false);
     }
 }

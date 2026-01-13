@@ -25,7 +25,9 @@ public class SlashEffectManager : MonoSingleton<SlashEffectManager>
     bool _debugState = false;
     public void Update()
     {
-        #if DEBUG
+        if (!ConfigManager.debugSlash.value)
+            return;
+
         if (Input.GetKeyDown(KeyCode.V))
         {
             _debugState = !_debugState;
@@ -47,7 +49,6 @@ public class SlashEffectManager : MonoSingleton<SlashEffectManager>
             
             Slash(ang, pos, side > 0, 1.5f);
         }
-        #endif
     }
 
     /// <summary>
