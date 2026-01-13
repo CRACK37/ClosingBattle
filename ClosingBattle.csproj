@@ -11,38 +11,16 @@
         </RestoreAdditionalProjectSources>
         
         <LangVersion>default</LangVersion>
+        
+        <IsPackable>false</IsPackable>
     </PropertyGroup>
 
     <ItemGroup>
       <None Remove=".gitattributes" />
       <None Remove=".gitignore" />
-      <None Update="Assets\bundle_assets_all.bundle">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Assets\catalog.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Assets\cb43dd7ae0c146f4_monoscripts.bundle">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Assets\data.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Assets\closingbattle_assets_all.bundle">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Assets\closingbattle_assets_all_0bf9cf71ef7a2d9ce9c7f26a6b1fa7da.bundle">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Assets\settings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Assets\AddressablesLink\link.xml">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Assets\StandaloneWindows64\closingbattle_assets_all.bundle">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
+      <Content Include="Source\Assets\**\*.*">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
   <PropertyGroup>
@@ -82,7 +60,7 @@
     </ItemGroup>
     
     <ItemGroup>
-      <Folder Include="Assets\" />
+      <Folder Include="Source\Assets\" />
     </ItemGroup>
     
 </Project>

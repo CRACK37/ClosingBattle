@@ -1,5 +1,5 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  
+
   <Target Name="DeployToPlugins" AfterTargets="Build" 
           Condition="'$(CopyToBepInExPluginsDir)' == 'true'">
     
@@ -15,26 +15,33 @@
     
     <Error Condition="!Exists('$(BepInExPluginsDir)')"
         Text="BepInEx plugins directory does not exist: $(BepInExPluginsDir)"/>
-    
+
     <MakeDir Condition="!Exists('$(DestinationDir)')"
-      Directories="$(DestinationDir)"/>
+             Directories="$(DestinationDir)"/>
+    <MakeDir Condition="!Exists('$(DestinationDir)/Assets')"
+             Directories="$(DestinationDir)/Assets"/>
 
     <Copy
-      SourceFiles="$(SourceDir)\$(AssemblyName).dll"
-      DestinationFiles="$(DestinationDir)\$(AssemblyName).dll"
-      SkipUnchangedFiles="true" 
+            SourceFiles="$(SourceDir)\$(AssemblyName).dll"
+            DestinationFiles="$(DestinationDir)\$(AssemblyName).dll"
+            SkipUnchangedFiles="true"
+    />
+    <Copy
+            SourceFiles="$(SourceDir)\$(AssemblyName).pdb"
+            DestinationFiles="$(DestinationDir)\$(AssemblyName).pdb"
+            SkipUnchangedFiles="true"
     />
 
-    <!-- Recursively copy the Assets folder and its contents only -->
     <ItemGroup>
-      <AssetFiles Include="$(SourceDir)Assets\**\*" />
+      <AssetsSourceFiles Include="$(SourceDir)Source/Assets/**/*.*" />
     </ItemGroup>
-
+    <MakeDir
+            Directories="@(AssetsSourceFiles->'$(DestinationDir)/Assets/%(RecursiveDir)')" />
     <Copy
-        SourceFiles="@(AssetFiles)"
-        DestinationFolder="$(DestinationDir)\Assets\%(RecursiveDir)"
-        SkipUnchangedFiles="true" 
-    />
+            SourceFiles="@(AssetsSourceFiles)"
+            DestinationFiles="@(AssetsSourceFiles->'$(DestinationDir)/Assets/%(RecursiveDir)%(Filename)%(Extension)')"
+            SkipUnchangedFiles="true" />
+    <Message Text="AssetsToCopy = @(AssetsSourceFiles)" Importance="high" />
     
     <Message Importance="high" Text="Files copied to $(DestinationDir)" />
   </Target>
