@@ -1,4 +1,4 @@
-Shader "Hidden/Flashbang"
+Shader "ClosingBattle/Flashbang"
 {
     Properties
     {

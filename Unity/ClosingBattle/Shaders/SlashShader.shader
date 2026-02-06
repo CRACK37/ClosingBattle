@@ -1,4 +1,4 @@
-Shader "Hidden/SlashShader"
+Shader "ClosingBattle/SlashShader"
 {
     Properties
     {

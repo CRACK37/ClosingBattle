@@ -1,4 +1,4 @@
-Shader "Hidden/FutureColor"
+Shader "ClosingBattle/FutureColor"
 {
     Properties
     {

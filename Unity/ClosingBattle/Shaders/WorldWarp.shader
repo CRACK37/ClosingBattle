@@ -1,4 +1,4 @@
-Shader "Hidden/WorldWarp"
+Shader "ClosingBattle/WorldWarp"
 {
     Properties
     {

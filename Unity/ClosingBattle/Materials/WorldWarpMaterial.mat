@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WorldWarpMaterial
-  m_Shader: {fileID: 4800000, guid: 3f87f37d4a0c03f4083e0bd01b7c8b10, type: 3}
+  m_Shader: {fileID: 4800000, guid: f6a3f1e18c0e4c8448c21b7dae4452ab, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -29,6 +29,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _TimeStart: 201.59682
+    - _TimeStart: 0
     m_Colors: []
   m_BuildTextureStacks: []

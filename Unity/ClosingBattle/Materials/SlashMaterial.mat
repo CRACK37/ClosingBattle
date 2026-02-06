@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SlashMaterial
-  m_Shader: {fileID: 4800000, guid: abb4f854403ea154ba4958ad9a110869, type: 3}
+  m_Shader: {fileID: 4800000, guid: bc912193e2166e143981700ed86ae2fa, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -35,6 +35,6 @@ Material:
     - _SlashSide: 0.15
     - _SlashSin: -0.21
     - _SlashX: 0.5
-    - _TimeStart: 104.331
+    - _TimeStart: 0
     m_Colors: []
   m_BuildTextureStacks: []

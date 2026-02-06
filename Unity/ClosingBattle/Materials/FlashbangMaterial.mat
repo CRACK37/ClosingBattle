@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FlashbangMaterial
-  m_Shader: {fileID: 4800000, guid: f8f63c614a3c66a4388dcadcbcc6e416, type: 3}
+  m_Shader: {fileID: 4800000, guid: 297564b1bbabf264dbb2ea010fff011c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -35,6 +35,6 @@ Material:
     - _SlashSide: 0.15
     - _SlashSin: -0.21
     - _SlashX: 0.5
-    - _TimeStart: 94.04291
+    - _TimeStart: 0
     m_Colors: []
   m_BuildTextureStacks: []
