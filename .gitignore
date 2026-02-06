@@ -368,3 +368,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Un-ignore the meta files inside the unity assets folder (and subfolders)
+!Unity/ClosingBattle/**/*.meta
