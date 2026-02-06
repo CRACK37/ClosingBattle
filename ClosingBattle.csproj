@@ -18,18 +18,21 @@
     <ItemGroup>
       <None Remove=".gitattributes" />
       <None Remove=".gitignore" />
-      <Content Include="Source\Assets\**\*.*">
-          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
     </ItemGroup>
 
   <PropertyGroup>
     <!-- Ensure that this has BepInEx installed -->
-    <UltrakillDir>C:/Program Files (x86)/Steam/steamapps/common/ULTRAKILL/</UltrakillDir>
+    <UltrakillDir>Defined in ClosingBattle.csproj.user!!</UltrakillDir>
     <CopyToBepInExPluginsDir>true</CopyToBepInExPluginsDir>
   </PropertyGroup>
   
   <Import Project="Properties/DeployToPlugins.targets" Condition="Exists('Properties/DeployToPlugins.targets')" />
+  
+  <ItemGroup>
+    <Compile Remove="Unity\**" />
+    <EmbeddedResource Remove="Unity\**" />
+    <None Remove="Unity\**" />
+  </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
@@ -42,25 +45,48 @@
     </ItemGroup>
     
     <ItemGroup>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>$(UltrakillDir)ULTRAKILL_Data/Managed/Assembly-CSharp.dll</HintPath>
+        <Private>false</Private>
+        <CopyLocal>false</CopyLocal>
+      </Reference>
+      <Reference Include="Unity.Addressables">
+        <HintPath>$(UltrakillDir)ULTRAKILL_Data/Managed/Unity.Addressables.dll</HintPath>
+        <Private>false</Private>
+        <CopyLocal>false</CopyLocal>
+      </Reference>
+      <Reference Include="Unity.InputSystem">
+        <HintPath>$(UltrakillDir)ULTRAKILL_Data/Managed/Unity.InputSystem.dll</HintPath>
+        <Private>false</Private>
+        <CopyLocal>false</CopyLocal>
+      </Reference>
+      <Reference Include="Unity.ResourceManager">
+        <HintPath>$(UltrakillDir)ULTRAKILL_Data/Managed/Unity.ResourceManager.dll</HintPath>
+        <Private>false</Private>
+        <CopyLocal>false</CopyLocal>
+      </Reference>
+      
       <Reference Include="PluginConfigurator">
         <HintPath>Libs\PluginConfigurator.dll</HintPath>
       </Reference>
       <Reference Include="PluginConfiguratorComponents">
         <HintPath>Libs\PluginConfiguratorComponents.dll</HintPath>
       </Reference>
-      <Reference Include="Unity.Addressables">
-        <HintPath>Libs\Unity.Addressables.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.InputSystem">
-        <HintPath>Libs\Unity.InputSystem.dll</HintPath>
-      </Reference>
-      <Reference Include="Unity.ResourceManager">
-        <HintPath>Libs\Unity.ResourceManager.dll</HintPath>
-      </Reference>
     </ItemGroup>
-    
-    <ItemGroup>
-      <Folder Include="Source\Assets\" />
-    </ItemGroup>
-    
+  
+  <ItemGroup>
+    <!-- include files under Source\Assets (relative to the project file) -->
+    <AssetsFiles Include="Source\Assets\**\*.*" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Source\Assets\" />
+  </ItemGroup>
+
+  <Target Name="CopyAssetsToOutput" AfterTargets="Build">
+    <Message Text="Copying Assets to output: $(TargetDir)Assets\" Importance="high" />
+    <Copy SourceFiles="@(AssetsFiles)" DestinationFiles="@(AssetsFiles->'$(TargetDir)Assets\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Import Project="$(MSBuildProjectFullPath).user" Condition="Exists('$(MSBuildProjectFullPath).user')" />
 </Project>

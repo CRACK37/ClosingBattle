@@ -17,8 +17,8 @@ public class SlashEffectManager : MonoSingleton<SlashEffectManager>
     public Material EffectMaterial = null!;
 
     public void Start()
-    {
-        EffectMaterial = Addressables.LoadAssetAsync<Material>("SlashMaterial").WaitForCompletion();
+    {   
+        EffectMaterial = Addressables.LoadAssetAsync<Material>("Assets/ClosingBattle/Materials/SlashMaterial.mat").WaitForCompletion();
         PostProcessEffects.AddPostProcessingEffect(EffectMaterial, "SlashEffect");
     }
 

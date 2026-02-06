@@ -1,4 +1,4 @@
-﻿using BepInEx;
+﻿    using BepInEx;
 using BepInEx.Logging;
 using ClosingBattle.Classes;
 using HarmonyLib;
@@ -80,15 +80,15 @@ public class Plugin : BaseUnityPlugin
         }
         _assetBinds.Add(callback);
     }
-    private void OnAssetsLoaded(AsyncOperationHandle<IResourceLocator> rLocator)
-    {
-        HasLoaded = true;
-        
-        var sem = SlashEffectManager.Instance;
-        
-        foreach (Action action in _assetBinds)
+        private void OnAssetsLoaded(AsyncOperationHandle<IResourceLocator> rLocator)
         {
-            action();
+            HasLoaded = true;
+
+            var sem = SlashEffectManager.Instance;
+        
+            foreach (Action action in _assetBinds)
+            {
+                action();
+            }
         }
-    }
 }

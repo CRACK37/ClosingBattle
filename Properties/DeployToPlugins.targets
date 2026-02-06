@@ -21,6 +21,7 @@
     <MakeDir Condition="!Exists('$(DestinationDir)/Assets')"
              Directories="$(DestinationDir)/Assets"/>
 
+    <!-- copy assembly and pdb -->
     <Copy
             SourceFiles="$(SourceDir)\$(AssemblyName).dll"
             DestinationFiles="$(DestinationDir)\$(AssemblyName).dll"
@@ -32,16 +33,17 @@
             SkipUnchangedFiles="true"
     />
 
+    <!-- copy Assets folder (preserve subfolders) if it exists next to the dll -->
     <ItemGroup>
-      <AssetsSourceFiles Include="$(SourceDir)Source/Assets/**/*.*" />
+      <AssetFiles Include="$(SourceDir)Assets\**\*.*" Condition="Exists('$(SourceDir)Assets')" />
     </ItemGroup>
-    <MakeDir
-            Directories="@(AssetsSourceFiles->'$(DestinationDir)/Assets/%(RecursiveDir)')" />
+
     <Copy
-            SourceFiles="@(AssetsSourceFiles)"
-            DestinationFiles="@(AssetsSourceFiles->'$(DestinationDir)/Assets/%(RecursiveDir)%(Filename)%(Extension)')"
-            SkipUnchangedFiles="true" />
-    <Message Text="AssetsToCopy = @(AssetsSourceFiles)" Importance="high" />
+      SourceFiles="@(AssetFiles)"
+      DestinationFolder="$(DestinationDir)Assets\%(RecursiveDir)"
+      SkipUnchangedFiles="true"
+      Condition="'@(AssetFiles)' != ''"
+    />
     
     <Message Importance="high" Text="Files copied to $(DestinationDir)" />
   </Target>
