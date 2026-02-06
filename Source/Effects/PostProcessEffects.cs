@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ClosingBattle.Classes;
+namespace ClosingBattle.Effects;
 
 [RequireComponent(typeof(Camera))]
 public class PostProcessEffects : MonoBehaviour

@@ -1,6 +1,5 @@
-﻿    using BepInEx;
+﻿using BepInEx;
 using BepInEx.Logging;
-using ClosingBattle.Classes;
 using HarmonyLib;
 using System;
 using System.Collections.Generic;
@@ -11,6 +10,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.AddressableAssets.ResourceLocators;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
+using ClosingBattle.Effects;
 
 namespace ClosingBattle;
 

@@ -1,6 +1,6 @@
-﻿using ClosingBattle.Classes;
-using HarmonyLib;
+﻿using HarmonyLib;
 using UnityEngine;
+using ClosingBattle.Effects;
 
 namespace ClosingBattle.Patches;
 

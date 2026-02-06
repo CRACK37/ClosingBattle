@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using Random = UnityEngine.Random;
 
-namespace ClosingBattle.Classes;
+namespace ClosingBattle.Effects;
 
 [ConfigureSingleton(SingletonFlags.PersistAutoInstance)]
 public class SlashEffectManager : MonoSingleton<SlashEffectManager>
