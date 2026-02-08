@@ -1,9 +1,11 @@
-﻿using HarmonyLib;
-using UnityEngine;
+﻿using ClosingBattle.Core;
 using ClosingBattle.Effects;
+using HarmonyLib;
+using UnityEngine;
 
 namespace ClosingBattle.Patches;
 
+[PatchOnEntry]
 [HarmonyPatch]
 public class PostProcessing
 {

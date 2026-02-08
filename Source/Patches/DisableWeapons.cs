@@ -1,9 +1,11 @@
-﻿using ClosingBattle.Weapons;
+﻿using ClosingBattle.Core;
+using ClosingBattle.Weapons;
 using HarmonyLib;
 using UnityEngine;
 
 namespace ClosingBattle.Patches;
 
+[PatchOnEntry]
 [HarmonyPatch]
 public static class DisableWeapons
 {
@@ -40,6 +42,7 @@ public static class DisableWeapons
         cube.name = "MyCube";
         cube.GetComponent<BoxCollider>().enabled = false;
         cube.transform.position = new Vector3(-1.0f, -0.5f, 0f);
+        cube.transform.localScale = new Vector3(.75f, .75f, .75f);
         int tempSlot = 1;
         
         GameObject gameObject = Object.Instantiate<GameObject>(cube, MonoSingleton<GunControl>.Instance.transform);
