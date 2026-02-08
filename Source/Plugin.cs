@@ -1,16 +1,19 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
+using ClosingBattle.Core;
+using ClosingBattle.Effects;
 using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.AddressableAssets.ResourceLocators;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
-using ClosingBattle.Effects;
+using static ClosingBattle.Core.LogHelper;
 
 namespace ClosingBattle;
 
@@ -25,23 +28,27 @@ public class Plugin : BaseUnityPlugin
     private static List<Action> _assetBinds = new List<Action>();
     
     internal new static ManualLogSource Logger { get; private set; } = null!;
-    internal static Harmony Harmony = null!;
 
     public static string AddressableAssetPath { get; private set; } = "";
     public static bool HasLoaded { get; private set; }
 
     private void Awake()
     {
-        if (Harmony == null)
-            Harmony = new Harmony(GUID);
-
-        Harmony.PatchAll();
-
         Logger = base.Logger;
-        Logger.LogInfo($"Plugin {GUID} is loaded!");
+        LogInfo($"Plugin {GUID} is loaded!");
         gameObject.hideFlags = HideFlags.DontSaveInEditor;
 
+        var harmony = new Harmony(GUID);
+
         ConfigManager.Initialize();
+
+        foreach (var type in typeof(Plugin).Assembly.GetTypes())
+        {
+            if (type.GetCustomAttribute<PatchOnEntryAttribute>() != null) 
+                harmony.PatchAll(type);
+        }
+
+        LogInfo("Patches applied");
 
         SceneManager.sceneLoaded += (s, m) =>
         {
@@ -52,7 +59,7 @@ public class Plugin : BaseUnityPlugin
                 string catalogPath = Path.Combine(folder, "Assets", "catalog.json");
                 if (!File.Exists(catalogPath))
                 {
-                    Logger.LogError("No assets!");
+                    LogError("No assets!");
                     return;
                 }
                 
@@ -61,11 +68,12 @@ public class Plugin : BaseUnityPlugin
                 string text = File.ReadAllText(catalogPath);
                 string newText = text.Replace("{UnityEngine.AddressableAssets.Addressables.RuntimePath}\\\\StandaloneWindows64\\\\",
                     "{ClosingBattle.Plugin.AddressableAssetPath}\\\\StandaloneWindows64\\\\");
+                
                 if(text != newText)
                     File.WriteAllText(catalogPath, text);
                 
                 AddressableAssetPath = Path.Combine(folder, "Assets");
-                Logger.LogInfo($"Loading assets at {catalogPath}...");
+                LogInfo($"Loading assets at {catalogPath}...");
                 Addressables.LoadContentCatalogAsync(catalogPath, true, "").Completed += OnAssetsLoaded;
             }
         };
@@ -78,17 +86,19 @@ public class Plugin : BaseUnityPlugin
             callback();
             return;
         }
+
         _assetBinds.Add(callback);
     }
-        private void OnAssetsLoaded(AsyncOperationHandle<IResourceLocator> rLocator)
-        {
-            HasLoaded = true;
 
-            var sem = SlashEffectManager.Instance;
-        
-            foreach (Action action in _assetBinds)
-            {
-                action();
-            }
+    private void OnAssetsLoaded(AsyncOperationHandle<IResourceLocator> rLocator)
+    {
+        HasLoaded = true;
+
+        SlashEffectManager.Instance.Awake();
+
+        foreach (Action action in _assetBinds)
+        {
+            action();
         }
+    }
 }
