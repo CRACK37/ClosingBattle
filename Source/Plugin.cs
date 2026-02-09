@@ -8,10 +8,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.AddressableAssets.ResourceLocators;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceLocations;
 using UnityEngine.SceneManagement;
 using static ClosingBattle.Core.LogHelper;
 
@@ -100,5 +102,26 @@ public class Plugin : BaseUnityPlugin
         {
             action();
         }
+
+        /*
+        if (rLocator.Status != AsyncOperationStatus.Succeeded)
+        {
+            Debug.LogError($"Catalog load failed: {rLocator.Status}");
+            return;
+        }
+
+        var locator = rLocator.Result;
+
+        foreach (var key in locator.Keys)
+        {
+            if (locator.Locate(key, typeof(object), out IList<IResourceLocation> locations))
+            {
+                foreach (var loc in locations)
+                {
+                    LogInfo(loc.PrimaryKey);
+                }
+            }
+        }
+        */
     }
 }

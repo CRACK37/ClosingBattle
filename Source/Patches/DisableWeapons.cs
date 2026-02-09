@@ -2,6 +2,7 @@
 using ClosingBattle.Weapons;
 using HarmonyLib;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace ClosingBattle.Patches;
 
@@ -37,15 +38,12 @@ public static class DisableWeapons
         __instance.rocketGreen = [];
         __instance.rocketRed = [];
 
-        // Add our own weapons
-        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.name = "MyCube";
-        cube.GetComponent<BoxCollider>().enabled = false;
-        cube.transform.position = new Vector3(-1.0f, -0.5f, 0f);
-        cube.transform.localScale = new Vector3(.75f, .75f, .75f);
+        // Add our weapons
+        GameObject fists = Addressables.LoadAssetAsync<GameObject>("Assets/ClosingBattle/Prefabs/Fists/Fists.prefab").WaitForCompletion();
+        
         int tempSlot = 1;
         
-        GameObject gameObject = Object.Instantiate<GameObject>(cube, MonoSingleton<GunControl>.Instance.transform);
+        GameObject gameObject = Object.Instantiate<GameObject>(fists, MonoSingleton<GunControl>.Instance.transform);
         gameObject.AddComponent<Fists>();
         MonoSingleton<GunControl>.Instance.slots[tempSlot].Add(gameObject);
         MonoSingleton<GunControl>.Instance.ForceWeapon(cube, true);
