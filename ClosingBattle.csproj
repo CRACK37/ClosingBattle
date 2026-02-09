@@ -73,7 +73,7 @@
         <HintPath>Libs\PluginConfiguratorComponents.dll</HintPath>
       </Reference>
 
-      <Publicize Include="Assembly-CSharp"/>
+      <Publicize Include="Assembly-CSharp" />
     </ItemGroup>
   
   <ItemGroup>
@@ -83,6 +83,7 @@
   
   <ItemGroup>
     <Folder Include="Source\Assets\" />
+    <Folder Include="Source\Weapons\Swords\" />
   </ItemGroup>
 
   <Target Name="CopyAssetsToOutput" AfterTargets="Build">
